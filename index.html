@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Frontend Mentor | Multi-step form</title>
+</head>
+
+<style type="text/css">
+  *{
+    text-decoration: none;
+    
+  }
+  .navbar{
+    background: black; font-family: calibri; padding-right: 15px ;padding-left: 15px;
+  }
+  .navdiv{
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo a{
+    font-size: 35px ; font-weight: 600; color: white;
+
+  }
+  button{
+    background-color: white; margin-left: -5px;border-radius: 50px;padding: 10px; width: 90px;
+  }
+  button a{
+    color: black;font-weight: bold;font-size: 15px;
+  }
+
+
+
+
+
+</style>
+
+<body>
+  <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="#">FullGaming</a></div>
+      <button style="margin-left: 1500px;"><a href="#">LogIn</a></button>
+      <button><a href="#">SignUp</a></button>
+
+
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+  <div class="main">
+
+    <!-- Sidebar start -->
+    <div class="sidebar">
+      <img src="./images/bg-sidebar-desktop.svg" alt="side-bar" class="side-bar">
+      <div class="step">
+        <div class="step-1">
+          <h2 class="number step-indicator">1</h2>
+          <div class="flex-steps">
+            <p>Step 1</p>
+            <h3>Your info</h3>
+          </div>
+        </div>
+        <div class="step-2">
+          <h2 class="number step-indicator">2</h2>
+          <div class="flex-steps">
+            <p>Step 2</p>
+            <h3>Select plan</h3>
+          </div>
+        </div>
+        <div class="step-3">
+          <h2 class="number step-indicator">3</h2>
+          <div class="flex-steps">
+            <p>Step 3</p>
+            <h3>Add-ons</h3>
+          </div>
+        </div>
+        <div class="step-4 ">
+          <h2 class="number step-indicator">4</h2>
+          <div class="flex-steps">
+            <p>Step 4</p>
+            <h3>Summary</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-form">
+      <div class="form-step" index="1">
+        <div class="form-input-1">
+          <h1 style="color: turquoise;" class="title">Personal info</h1>
+          <p style="font-size: larger;"  class="step-description"><b>Please provide your name, email address, and phone number.</b></p>
+          <form class="user-input">
+            <legend style="color: turquoise; font-size: x-large;">Name</legend>
+            <input type="text" class="user-name" placeholder="e.g. Stephen King" required>
+            <legend style="color: turquoise; font-size: x-large;">Email Address</legend>
+            <input type="email" class="user-email" placeholder="e.g. stephenking@lorem.com" required>
+            <legend style="color: turquoise; font-size: x-large;">Phone Number</legend>
+            <input type="tel" class="user-email" placeholder="e.g. +1 234 567 890" name="phone" required>
+          </form>
+        </div>
+      </div>
+      <div class="form-step" index="2" id="form-step-2">
+        <div class="form-input-2">
+          <h1 style="color: turquoise;"  class="title">Select your plan</h1>
+          <p style="font-size: larger;"  class="step-description"> You have the option of monthly or yearly billing.</p>
+          <div class="cards">
+            <div  class="card" data-name="arcade">
+              <img src="./images/icon-arcade.svg" alt="arcade-icon" class="card-img">
+              <h4 style="color: turquoise;font-size: x-large;"  class="plan-name">Arcade</h4>
+              <p class="plan-description">$9<span class="yearly-description">0</span>/<span class="yr">mo</span></p>
+              <span style="color: turquoise; font-size: large;"    class="yearly-offer">2 months free</span>
+            </div>
+            <div class="card" data-name="advanced">
+              <img src="./images/icon-advanced.svg" alt="advance-icon" class="card-img">
+              <h4 style="color: turquoise; font-size: x-large;"     class="plan-name">Advanced</h4>
+              <p class="plan-description"> $12<span class="yearly-description">0</span>/<span class="yr">mo</span>
+              </p>
+              <span  style="color: turquoise; font-size: large;" class="yearly-offer">2 months free</span>
+            </div>
+            <div class="card pro" data-name="pro">
+              <img src="./images/icon-pro.svg" alt="pro-icon" class="card-img">
+              <h4  style="color: turquoise; font-size: x-large;"     class="plan-name">Pro</h4>
+              <p class="plan-description"> $15<span class="yearly-description">0</span>/<span class="yr">mo</span>
+              </p>
+              <span style="color: turquoise; font-size: large;"     class="yearly-offer">2 months free</span>
+            </div>
+          </div>
+          <section id="Toggle-Dark-Mode" class="panel-element">
+            <div class="toggle-contents-wrapper">
+              <p class="monthly-subscription">Monthly</p>
+              <div id="Dark-Mode-Switch" class="toggle-wrapper">
+                <div class="toggle-dot"></div>
+              </div>
+              <p class="yearly-subscription">Yearly</p>
+            </div>
+          </section>
+
+        </div>
+
+
+      </div>
+      <div class="form-step" index="3">
+        <h1 style="color:turquoise;"   class="title"> Pick add-ons</h1>
+        <p  style="color: turquoise; font-size: x-large; font:bolder;"     class="step-description"> Add-ons help enhance your gaming experience.</p>
+        <div class="add-on-options">
+          <div class="option1 opts">
+            <input type="checkbox" onclick=checkAddOns()>
+            <label class="container1">
+              <h3 style="color: turquoise; font-size: x-large;">Online service</h3>
+              <p  style="color: turquoise; font-size: x-large;"  class="des">Access to multiplayer games</p>
+            </label>
+            <p style="color: turquoise; font-size: x-large;"     class="option-price">+$1<span class="yearly-description">0</span>/<span class="yr">mo</span></p>
+          </div>
+          <div class="option2 opts">
+            <input type="checkbox" onclick=checkAddOns()>
+            <label class="container1">
+              <h3  style="color: turquoise; font-size: x-large;">Larger storage</h3>
+              <p style="color: turquoise; font-size: x-large;"    class="des">Extra 1TB of cloud save</p>
+            </label>
+            <p style="color: turquoise; font-size: x-large;"    class="option-price">+$2<span class="yearly-description">0</span>/<span class="yr">mo</span></p>
+          </div>
+          <div class="option3 opts">
+            <input type="checkbox" onclick=checkAddOns()>
+            <label class="container1">
+              <h3 style="color: turquoise; font-size: x-large;"    >Customizable Profile</h3>
+              <p  style="color: turquoise; font-size: x-large;"    class="des">Custom theme on your profile</p>
+            </label>
+            <p  style="color: turquoise; font-size: x-large;"    class="option-price">+$2<span class="yearly-description">0</span>/<span class="yr">mo</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="form-step" index="4">
+        <h1 style="color: turquoise; font-size: x-large;"      class="title"> Finishing up</h1>
+        <p  style="color: turquoise; font-size: x-large;"      class="step-description"> Double-check everything looks OK before confirming.</p>
+        <div class="user-selection">
+          <div class="final-box">
+            <div class="user-plan">
+              <div class="user-plan-flex">
+                <h3 class="plan-selected">Arcade(<span class="duration">Monthly</span>)</h3>
+                <a href="#form-step-2">Change Plan</a>
+              </div>
+              <h3 class="final-plan-price">$9/mo</h3>
+            </div>
+            <div class="user-selected-add-ons">
+              <div class="add-on-1">
+                <p class="add-on-1 light">No add-Ons</p>
+                <p class="add-on-price"></p>
+              </div>
+            </div>
+          </div>
+          <div class="final-price">
+            <p style="color: turquoise; font-size: x-large;"      class="total1 light">Total(<span class="yr">mo</span>)</p>
+            <p  style="color: rgb(183, 50, 255); font-size: x-large;"         class="total">$12/<span class="duration final">mo</span></p>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="form-step" index="5">
+        <div class="thank">
+          <img src="./images/icon-thank-you.svg" alt="thanks">
+          <h1  style="color: rgb(183, 50, 255); font-size: x-large;"      class="thanksu">Thank you!</h1>
+          <p style="color: turquoise; font-size: x-large;" >
+            Thanks for confirming your subscription! We hope you have fun
+            using our platform. If you ever need support, please feel free
+            to email us at support@FullGaming.com
+          </p>
+        </div>
+      </div>
+
+      <div class="buttons">
+
+        <button class="go-back-button"> Go Back</button>
+        <button class="next-step">Next Step</button>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footerContainer">
+    <div class="socialIcons">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+      <a href=""><i class="fa-brands fa-google-plus"></i></a>
+      <a href=""><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footerNav">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">News</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">Our Team</a></li>
+      </ul>
+    </div>
+    
+  </div>
+  <div class="footerBottom">
+    <p>Copyright &copy;2024; Designed by <span class="designer">Pradyumna</span></p>
+  </div>
+</footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
